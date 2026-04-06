@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css"> 
+    <script src="js/script.js" defer></script>
     <title>Whitepace - Project Management</title>
 </head>
 <body>
@@ -13,16 +14,32 @@
             <strong class="logo">whitespace</strong>
             <ul class="nav-list">
                 <li class="active"><a href="#">Products</a></li>
-                <li><a href="#">Solutions</a></li>
-                <li><a href="#">Resources</a></li>
-                <li><a href="#">Pricing</a></li>
-                <li><a href="#" class="btn">Login</a></li>
+                <li><a href="#ProjectManagement">Project Management</a></li>
+                <li><a href="#WorkTogether">Work Together</a></li>
+                <li><a href="#Reviews">Reviews</a></li>
+                <li><a href="#Login" class="btn">Login</a></li>
             </ul>
         </nav>
+        
+         <nav class="mobile-menu">
+            <ul class="nav-list">
+                <li class="active"><a href="#">Products</a></li>
+                <li><a href="#ProjectManagement">Project Management</a></li>
+                <li><a href="#WorkTogether">Work Together</a></li>
+                <li><a href="#Reviews">Reviews</a></li>
+                <li><a href="#Login" class="btn">Login</a></li>
+            </ul>
+        </nav>
+        
+        <section class="burger-nav">
+            <span></span>
+            <span></span>
+            <span></span>
+        </section>
     </header>
 
     <main>
-        <section class="hero-section">
+        <section class="hero-section" id="Hero">
             <article class="container hero-content">
                 <header class="hero-text">
                     <h1>Get More Done with whitepace</h1>
@@ -35,7 +52,7 @@
             </article>
         </section>
         
-        <section class="pm-section">
+        <section class="pm-section" id="ProjectManagement">
              <article class="container pm-content">
                 <header class="pm-text">
                     <h2>Project Management</h2> <p>Images, videos, PDFs and audio files are supported. Create math expressions and diagrams directly from the app. Take photos with the mobile app and save them to a note.</p>
@@ -47,7 +64,7 @@
             </article>
         </section>
         
-        <section class="wt-section">
+        <section class="wt-section" id="WorkTogether">
              <article class="container wt-content">
                 <header class="wt-text">
                     <h2>Work Together</h2> <p>With whitepace, share your notes with your colleagues and collaborate on them. You can also publish a note to the internet and share the URL with others.</p>
@@ -59,7 +76,7 @@
             </article>
         </section>
         
-        <section class="ext-section">
+        <section class="ext-section" id="Extensions">
              <article class="container ext-content">
                 <header class="ext-text">
                     <h2>Use as Extension</h2> <p>Use the web clipper extension, available on Chrome and Firefox, to save web pages or take screenshots as notes.</p>
@@ -71,17 +88,26 @@
             </article>
         </section>
 
-        <section class="reviews-section container">
-            <h2 style="text-align: center; margin-bottom: 20px;">Why Choose Us?</h2>
+        <section class="reviews-section container" id="Reviews">
+            <h2 style="text-align: center; margin-bottom: 20px;">Why Choose Us? <svg class="heart-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+</svg></h2>
+
+            <div class="filters">
+                <button class="btn filter-btn" data-filter="all">All</button>
+                <button class="btn filter-btn" data-filter="tech">Tech Features</button>
+                <button class="btn filter-btn" data-filter="service">Service</button>
+            </div>
+
             <div class="grid-cards">
-                <article class="card"><h3>Fast</h3><p>Optimized for speed.</p></article>
-                <article class="card"><h3>Secure</h3><p>Data is encrypted.</p></article>
-                <article class="card"><h3>Cloud</h3><p>Access anywhere.</p></article>
-                <article class="card"><h3>Support</h3><p>24/7 help team.</p></article>
+                <article class="card" data-category="tech"><h3>Fast</h3><p>Optimized for speed.</p></article>
+                <article class="card" data-category="tech"><h3>Secure</h3><p>Data is encrypted.</p></article>
+                <article class="card" data-category="service"><h3>Cloud</h3><p>Access anywhere.</p></article>
+                <article class="card" data-category="service"><h3>Support</h3><p>24/7 help team.</p></article>
             </div>
         </section>
         
-        <section class="form-wrapper">
+        <section class="form-wrapper" id="Login">
             <h2>Login</h2>
             <form class="sent-data">
                 <label for="email">Email:</label>
@@ -110,7 +136,7 @@
     </main>
 
     <footer class="footer-section">
-        <p>&copy; 2026 Whitepace. Практична робота 1-2.</p>
+        <p>&copy; 2026 Whitepace.</p>
     </footer>
 
 </body>
